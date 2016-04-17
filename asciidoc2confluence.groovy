@@ -1,5 +1,5 @@
 /**
- * Created by Ralf D. Müller on 03.09.2014.
+ * Created by Ralf D. Mï¿½ller on 03.09.2014.
  * https://github.com/rdmueller/asciidoc2confluence
  *
  * this script expects an HTML document created with AsciiDoctor
@@ -131,7 +131,7 @@ def pushToConfluence = { pageTitle, pageBody, parentId ->
     localPage = parseBody(pageBody)
 
     def localHash = MD5(localPage)
-    localPage = '<p><ac:structured-macro ac:name="toc"/></p>'+localPage             
+    localPage = '<p><ac:structured-macro ac:name="toc"><ac:parameter ac:name="style">none</ac:parameter></ac:structured-macro></p>'+localPage             
     localPage += '<p><ac:structured-macro ac:name="children"/></p>'
     localPage += '<p style="display:none">hash: #'+localHash+'#</p>'
 
